@@ -16,7 +16,7 @@ public class HomePage extends BasePO{
 		initialise(this);
 	}
 
-	@FindBy(how=How.LINK_TEXT, using = "Sign in") private WebElement signIn;
+	@FindBy(how=How.ID, using = "utility-open-an-account") private WebElement openAccount;
 	
 	public void launchHomePage() {
 		try {
@@ -28,8 +28,7 @@ public class HomePage extends BasePO{
 		}
 	}
 
-	public void clickSignInLink() {
-		wait.until(ExpectedConditions.elementToBeClickable(signIn)).click();
+	public void clickOpenAccountLink() {
+		wait.until(ExpectedConditions.elementToBeClickable(openAccount)).click();
 	}
-
 }

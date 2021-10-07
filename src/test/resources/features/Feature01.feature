@@ -5,10 +5,7 @@ Feature: Demo
 
   @signIn
   Scenario: Simple sign in scenario
-    When I click on SignIn button
-    Then I should be on the Authentication page
-    And I enter UserName as "tester@tet.com"
-    And I enter Password as "test1234"
-    When I click on LogIn button
-    Then I should be on the MyAccount page
-    And I click on SignOut button
+    When I click on openAccount button
+    Then I should be on the Registration page
+    Then I click on Start my application button
+    And sleep for "10000" millisec
