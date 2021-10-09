@@ -11,7 +11,6 @@ public class PageObjectManager {
 	private WebDriverWait wait;
 	private HomePage homePage;
 	private RegistrationPage regPage;
-	private MyAccountPage myAccPage;
 	
 	public PageObjectManager(WebDriver driver, WebDriverWait wait) {
 		this.driver = driver;
@@ -25,9 +24,4 @@ public class PageObjectManager {
 	public RegistrationPage getRegistrationPage() {
 		return (regPage == null)? regPage = new RegistrationPage(driver,wait) : regPage;
 	}
-	
-	public MyAccountPage getMyAccountPage() {
-		return (myAccPage == null)? myAccPage = new MyAccountPage(driver,wait) : myAccPage;
-	}
-	
 }
