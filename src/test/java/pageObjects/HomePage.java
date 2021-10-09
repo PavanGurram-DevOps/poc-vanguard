@@ -17,7 +17,7 @@ public class HomePage extends BasePO{
 	}
 
 	@FindBy(how=How.ID, using = "utility-open-an-account") private WebElement openAccount;
-	@FindBy(how=How.XPATH, using = "//*/div[@class='gbs-col-sm-2 gbs-col-md-1']/button[@id]") public WebElement cookiePopUp;
+//	@FindBy(how=How.XPATH, using = "//*/div[@class='gbs-col-sm-2 gbs-col-md-1']/button[@id]") public WebElement cookiePopUp;
 	
 	public void launchHomePage() {
 		try {
@@ -30,7 +30,7 @@ public class HomePage extends BasePO{
 	}
 
 	public void clickOpenAccountLink() {
-		wait.until(ExpectedConditions.elementToBeClickable(cookiePopUp)).click();
+//		wait.until(ExpectedConditions.elementToBeClickable(cookiePopUp)).click();
 		wait.until(ExpectedConditions.elementToBeClickable(openAccount)).click();
 	}
 }

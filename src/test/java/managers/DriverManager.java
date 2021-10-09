@@ -4,6 +4,7 @@ import enums.DriverType;
 import enums.EnvironmentType;
 import helpers.ConfigFileReader;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.UnexpectedAlertBehaviour;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -50,6 +51,7 @@ public class DriverManager {
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.setHeadless(false);
+                chromeOptions.setUnhandledPromptBehaviour(UnexpectedAlertBehaviour.ACCEPT);
                 chromeOptions.addArguments("--no-sandbox");
                 driver.set(new ChromeDriver(chromeOptions));
                 driver.get().manage().window().maximize();
