@@ -51,7 +51,7 @@ public class DriverManager {
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.setHeadless(false);
-                chromeOptions.setUnhandledPromptBehaviour(UnexpectedAlertBehaviour.ACCEPT);
+                chromeOptions.setUnhandledPromptBehaviour(UnexpectedAlertBehaviour.IGNORE);
                 chromeOptions.addArguments("--no-sandbox");
                 driver.set(new ChromeDriver(chromeOptions));
                 driver.get().manage().window().maximize();
